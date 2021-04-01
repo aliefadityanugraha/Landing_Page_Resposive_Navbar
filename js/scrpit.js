@@ -14,3 +14,9 @@ menuToogle.addEventListener("click", function () {
 //   delaySpeed: 100,
 //   loop: true,
 // });
+const tutul = document.querySelector(".more");
+
+tutul.onclick = function () {
+  window.location.href = "learnmore.html";
+  return false;
+};

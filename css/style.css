@@ -72,17 +72,38 @@ nav ul li a:hover {
 }
 /* Section */
 section {
-  background: rgba(255, 255, 255, 0.514);
+  background: rgba(255, 255, 255, 0.61);
   padding: 0px 0px 0px 0px;
   margin: 280px 0px 0px 0px;
 }
 p {
   padding: 20px;
   font-weight: 300;
+  text-align: center;
+}
+.quotes {
+  text-align: center;
+  font-size: 12px;
+  text-shadow: 1px 1px black;
 }
 h2 {
   text-align: center;
   padding: 20px;
+}
+h5 {
+  color: white;
+  /* background: rgba(255, 255, 255, 0.514); */
+  font-weight: 600;
+  text-align: center;
+  padding: 20px;
+}
+footer h5 a {
+  text-decoration: none;
+  color: rgb(0, 153, 255);
+}
+footer h5 a:hover {
+  text-decoration: none;
+  color: rgb(0, 225, 255);
 }
 /* Background */
 .Homescreen {
@@ -99,6 +120,19 @@ h2 {
   display: block;
   margin: auto;
 }
+/* Scrool Bar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #929292;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #535353;
+  border-radius: 0px;
+}
 /* Style Type Js */
 h1 {
   color: #fff;
@@ -106,11 +140,12 @@ h1 {
   text-align: center;
   padding: 210px 0px 0px 0px;
   text-shadow: 1px 1px black;
+  font-family: sans-serif, Montserrat;
 }
 
 button {
   height: 30px;
-  width: 70px;
+  width: 90px;
   border-radius: 20px;
   color: white;
   background: rgb(48, 103, 255);
@@ -118,6 +153,32 @@ button {
 }
 button:hover {
   background: rgb(144, 174, 255);
+}
+/* SVG STYLE */
+div svg:hover {
+  animation: svg 1s;
+  margin: auto;
+  color: chartreuse;
+}
+div svg {
+  /* justify-content: center;
+  justify-items: center;
+  justify-self: center; */
+  /* padding: 20px; */
+  margin: auto;
+  display: block;
+  /* display: flex; */
+}
+div svg:nth-child(1) {
+  padding-top: 20px;
+}
+@keyframes svg {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(369deg);
+  }
 }
 /* SideBar */
 
@@ -153,26 +214,22 @@ button:hover {
     position: relative;
   }
   .side-bar ul li a {
-    justify-content: space-evenly;
-    width: 100%;
-    padding: 40px;
+    display: inline-table;
+    padding-bottom: 50px;
     background-color: transparent;
     text-decoration: none;
     color: white;
     font-size: 15px;
-    text-decoration: none;
   }
   .side-bar ul {
     transform: translateX(-100%);
-    justify-content: space-evenly;
     background: rgba(255, 255, 255, 0.151);
     transition: all 1s;
     padding-bottom: 100vh;
-    padding-top: 20px;
+    padding-left: 20px;
     width: 80%;
-  }
-  .side-bar ul li a {
-    padding: 50px;
+    text-decoration: none;
+    list-style-type: none;
   }
   .side-bar {
     display: unset;
@@ -187,13 +244,20 @@ button:hover {
     color: #fff;
     font-size: 25px;
     text-align: center;
-    /* padding: 100px 0px 0px 0px; */
     text-shadow: 2px 2px black;
-    transform: translateY(-270%);
+    transform: translateY(-300%);
   }
   section {
     background: rgba(255, 255, 255, 0.514);
     padding: 0px 0px 0px 0px;
     margin: 0px 0px 0px 0px;
+    transform: translateY(-200%);
+  }
+  div svg {
+    margin: auto;
+    justify-items: center;
+    justify-self: center;
+    padding: 20px;
+    display: flex;
   }
 }
